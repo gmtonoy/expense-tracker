@@ -16,3 +16,8 @@ npx prisma generate
 npm run prisma:migrate
 npm run dev
 
+### 2. Frontend
+cd client
+npm install
+npm start
+
