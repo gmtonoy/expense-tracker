@@ -7,7 +7,11 @@ export default function AddExpense({ onAdd }) {
 
   const submit = (e) => {
     e.preventDefault();
-    onAdd({ description: desc, amount, date });
+    onAdd({
+      description: desc,
+      amount: parseFloat(amount),
+      date,
+    });
     setDesc("");
     setAmount("");
     setDate("");
@@ -38,3 +42,5 @@ export default function AddExpense({ onAdd }) {
       />
       <button type="submit">Add Expense</button>
     </form>
+  );
+}
